@@ -7,14 +7,13 @@ import 'package:sn_store/features/authentication/screens/login/widgets/login_hea
 import 'package:sn_store/styles/spacing_style.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 import 'package:sn_store/utils/constants/text_strings.dart';
-import 'package:sn_store/utils/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = SnHelperFunctions.isDarkMode(context);
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
