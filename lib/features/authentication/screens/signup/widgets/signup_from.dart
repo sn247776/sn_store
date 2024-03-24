@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sn_store/common/widgets/login_signup/form_divider.dart';
 import 'package:sn_store/common/widgets/login_signup/social_buttons.dart';
+import 'package:sn_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 import 'package:sn_store/utils/constants/text_strings.dart';
@@ -121,11 +122,11 @@ class SignupForm extends StatelessWidget {
             height: SnSizes.spaceBtwSections,
           ),
 
-          /// Sign In Button
+          /// Sign Up Button
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-                onPressed: () {}, child: const Text(SnTexts.createAccount)),
+                onPressed: () => Get.to(()=> const VerifyEmailScreen()), child: const Text(SnTexts.createAccount)),
           ),
           const SizedBox(
             height: SnSizes.spaceBtwItems,
