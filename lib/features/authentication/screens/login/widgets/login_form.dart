@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
+import 'package:sn_store/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:sn_store/features/authentication/screens/signup/signup.dart';
+import 'package:sn_store/navigation_menu.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 import 'package:sn_store/utils/constants/text_strings.dart';
 
@@ -45,7 +47,7 @@ class SnLoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(()=> const ForgotPassword()),
                     child: const Text(SnTexts.forgetPassword)),
               ],
             ),
@@ -57,7 +59,7 @@ class SnLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: const Text(SnTexts.signIn)),
+                  onPressed:  () => Get.to(()=> const NavigationMenu()), child: const Text(SnTexts.signIn)),
             ),
             const SizedBox(
               height: SnSizes.spaceBtwItems,
