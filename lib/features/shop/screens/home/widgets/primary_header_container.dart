@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sn_store/common/widgets/custom_shapes/circular_container.dart';
+import 'package:sn_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:sn_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import 'package:sn_store/utils/constants/colors.dart';
 
