@@ -5,7 +5,6 @@ import 'package:sn_store/common/widgets/custom_shapes/containers/circular_contai
 import 'package:sn_store/common/widgets/images/sn_rounded_image.dart';
 import 'package:sn_store/features/shop/controllers/home_controller.dart';
 import 'package:sn_store/utils/constants/colors.dart';
-import 'package:sn_store/utils/constants/image_strings.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 
 class PromoSlider extends StatelessWidget {

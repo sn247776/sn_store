@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sn_store/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:sn_store/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:sn_store/common/widgets/images/sn_rounded_image.dart';
 import 'package:sn_store/common/widgets/texts/section_heading.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/home_bar.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/home_categories.dart';
