@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sn_store/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:sn_store/common/widgets/texts/section_heading.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/home_bar.dart';
+import 'package:sn_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/primary_header_container.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,11 +22,35 @@ class HomeScreen extends StatelessWidget {
               children: [
                 ///Appbar
                 SnHomeAppBar(),
-                SizedBox(height: SnSizes.spaceBtwSections,),
+                SizedBox(
+                  height: SnSizes.spaceBtwSections,
+                ),
+
                 ///Searchbar
                 SnSearchContainer(text: 'Search in Store'),
-                SizedBox(height: SnSizes.spaceBtwSections,),
+                SizedBox(
+                  height: SnSizes.spaceBtwSections,
+                ),
+
                 ///Categories
+                Padding(
+                  padding: EdgeInsets.only(left: SnSizes.defaultSpace),
+                  child: Column(
+                    children: [
+                      SnSectionHeading(
+                        title: 'Popular Categories',
+                        showActionButton: false,
+                        textColor: Colors.white,
+                      ),
+                      SizedBox(
+                        height: SnSizes.spaceBtwItems,
+                      ),
+
+                      /// Categories
+                      SnHomeCategories()
+                    ],
+                  ),
+                )
               ],
             )),
           ],
@@ -32,3 +59,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
