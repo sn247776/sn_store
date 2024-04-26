@@ -10,21 +10,23 @@ class SnCircularContainer extends StatelessWidget {
     this.radius = 400,
     this.padding = 0,
     this.backgroundColor = SnColors.white,
+    this.margin,
   });
 
   final double? width;
   final double? height;
   final double radius;
   final double padding;
+  final EdgeInsets? margin;
   final Widget? child;
   final Color? backgroundColor;
-
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width:width,
+      width: width,
       height: height,
+      margin: margin,
       padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(radius),
