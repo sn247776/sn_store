@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sn_store/common/products/products/product_vertical_card.dart';
 import 'package:sn_store/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:sn_store/common/widgets/texts/section_heading.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/home_bar.dart';
@@ -57,11 +58,21 @@ class HomeScreen extends StatelessWidget {
 
             Padding(
               padding: EdgeInsets.all(SnSizes.defaultSpace),
-              child: PromoSlider(
-                banners: [
-                  SnImages.promoBanner1,
-                  SnImages.promoBanner2,
-                  SnImages.promoBanner3
+              child: Column(
+                children: [
+                  PromoSlider(
+                    banners: [
+                      SnImages.promoBanner1,
+                      SnImages.promoBanner2,
+                      SnImages.promoBanner3
+                    ],
+                  ),
+
+                  SizedBox(
+                    height: SnSizes.spaceBtwItems,
+                  ),
+
+                  SnProductVerticalCard()
                 ],
               ),
             )
