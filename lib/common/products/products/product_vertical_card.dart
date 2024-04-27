@@ -4,6 +4,7 @@ import 'package:sn_store/common/styles/shadows.dart';
 import 'package:sn_store/common/widgets/custom_shapes/rounded_container.dart';
 import 'package:sn_store/common/widgets/icons/circular_icon.dart';
 import 'package:sn_store/common/widgets/images/sn_rounded_image.dart';
+import 'package:sn_store/common/widgets/texts/product_price_text.dart';
 import 'package:sn_store/common/widgets/texts/product_title_text.dart';
 import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/constants/image_strings.dart';
@@ -15,11 +16,10 @@ class SnProductVerticalCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final dark = SnHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -34,81 +34,97 @@ class SnProductVerticalCard extends StatelessWidget {
             SnRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(SnSizes.sm),
-              backgroundColor: dark ? SnColors.dark: SnColors.light,
-              child:  Stack(
+              backgroundColor: dark ? SnColors.dark : SnColors.light,
+              child: Stack(
                 children: [
                   /// Thumbnail Image
-                  const SnRoundedImage(imageUrl: SnImages.productImage1, applyImageRadius: true),
-      
+                  const SnRoundedImage(
+                      imageUrl: SnImages.productImage1, applyImageRadius: true),
+
                   Positioned(
                     top: 12,
                     child: SnRoundedContainer(
                       radius: SnSizes.sm,
                       backgroundColor: SnColors.secondary.withOpacity(0.8),
-                      padding: const EdgeInsets.symmetric(horizontal: SnSizes.sm, vertical: SnSizes.xs),
-                      child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: SnColors.black),),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: SnSizes.sm, vertical: SnSizes.xs),
+                      child: Text(
+                        '25%',
+                        style: Theme.of(context)
+                            .textTheme
+                            .labelLarge!
+                            .apply(color: SnColors.black),
+                      ),
                     ),
                   ),
-                  
-                 const Positioned(
-                     top: 0,
-                     right: 0,
-                     child:  SnCircularIcon(icon: Iconsax.heart5, color: Colors.red,))
+
+                  const Positioned(
+                      top: 0,
+                      right: 0,
+                      child: SnCircularIcon(
+                        icon: Iconsax.heart5,
+                        color: Colors.red,
+                      ))
                 ],
               ),
             ),
-      
+
             const SizedBox(height: SnSizes.spaceBtwItems / 2),
-            
+
             /// Details
-            Padding(padding: EdgeInsets.only(left: SnSizes.sm),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SnProductTitleText(title: 'Green Nike Air Shoes', smallSize: true,),
-               const SizedBox(height: SnSizes.spaceBtwItems / 2),
-      
-                Row(
-                  children: [
-                    Text('Nike', overflow: TextOverflow.ellipsis, maxLines: 1, style: Theme.of(context).textTheme.labelMedium,),
-                    const SizedBox(width: SnSizes.xs),
-                    const Icon(Iconsax.verify5, color: SnColors.primary, size: SnSizes.iconXs,)
-                  ],
-                ),
-                // /// Spacer help us to give space in grid when our other girld size is not same so its helps us to give the same size to the both grid.
-                // Spacer(),
-      
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      '\$35.5',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: Theme.of(context).textTheme.headlineMedium,
-                    ),
-      
-                    Container(
-                      decoration:const BoxDecoration(
-                        color: SnColors.dark,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(SnSizes.cardRadiusMd),
-                          bottomRight: Radius.circular(SnSizes.productImageRadius),
-                        )
+            Padding(
+              padding: EdgeInsets.only(left: SnSizes.sm),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SnProductTitleText(
+                    title: 'Green Nike Air Shoes',
+                    smallSize: true,
+                  ),
+                  const SizedBox(height: SnSizes.spaceBtwItems / 2),
+
+                  Row(
+                    children: [
+                      Text(
+                        'Nike',
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: Theme.of(context).textTheme.labelMedium,
                       ),
-      
-                      child: const SizedBox(
-                        width: SnSizes.iconLg * 1.2,
-                        height: SnSizes.iconLg * 1.2,
-                        child: Center(child: Icon(Iconsax.add, color: SnColors.white)),
-                      ),
-                    )
-                  ],
-                )
-      
-      
-              ],
-            ),
+                      const SizedBox(width: SnSizes.xs),
+                      const Icon(
+                        Iconsax.verify5,
+                        color: SnColors.primary,
+                        size: SnSizes.iconXs,
+                      )
+                    ],
+                  ),
+                  // /// Spacer help us to give space in grid when our other girld size is not same so its helps us to give the same size to the both grid.
+                  // Spacer(),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const SnProductPriceText(price: '35'),
+                      Container(
+                        decoration: const BoxDecoration(
+                            color: SnColors.dark,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(SnSizes.cardRadiusMd),
+                              bottomRight:
+                                  Radius.circular(SnSizes.productImageRadius),
+                            )),
+                        child: const SizedBox(
+                          width: SnSizes.iconLg * 1.2,
+                          height: SnSizes.iconLg * 1.2,
+                          child: Center(
+                              child: Icon(Iconsax.add, color: SnColors.white)),
+                        ),
+                      )
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),
@@ -116,5 +132,3 @@ class SnProductVerticalCard extends StatelessWidget {
     );
   }
 }
-
-

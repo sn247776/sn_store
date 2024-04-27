@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sn_store/common/products/products/product_vertical_card.dart';
 import 'package:sn_store/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:sn_store/common/widgets/layout/grid_layout.dart';
 import 'package:sn_store/common/widgets/texts/section_heading.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/home_bar.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/home_categories.dart';
@@ -14,12 +15,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header
-            SnPrimaryHeaderContainer(
+            const SnPrimaryHeaderContainer(
                 child: Column(
               children: [
                 ///Appbar
@@ -57,22 +58,22 @@ class HomeScreen extends StatelessWidget {
             )),
 
             Padding(
-              padding: EdgeInsets.all(SnSizes.defaultSpace),
+              padding: const EdgeInsets.all(SnSizes.defaultSpace),
               child: Column(
                 children: [
-                  PromoSlider(
+                  const PromoSlider(
                     banners: [
                       SnImages.promoBanner1,
                       SnImages.promoBanner2,
                       SnImages.promoBanner3
                     ],
                   ),
-
-                  SizedBox(
+                  const SizedBox(
                     height: SnSizes.spaceBtwItems,
                   ),
-
-                  SnProductVerticalCard()
+                  SnGridLayout(
+                      itemCount: 4,
+                      itemBuilder: (_, index) => const SnProductVerticalCard())
                 ],
               ),
             )
