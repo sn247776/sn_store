@@ -4,10 +4,10 @@ import 'package:sn_store/utils/constants/colors.dart';
 
 class SnCartCounterIcon extends StatelessWidget {
   const SnCartCounterIcon({
-    super.key,required this.onPressed, required this.iconColor,
+    super.key,required this.onPressed, this.iconColor,
   });
 
-  final Color iconColor;
+  final Color? iconColor;
   final VoidCallback onPressed;
 
   @override
