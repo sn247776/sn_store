@@ -99,32 +99,36 @@ class SnProductVerticalCard extends StatelessWidget {
                       )
                     ],
                   ),
-                  // /// Spacer help us to give space in grid when our other girld size is not same so its helps us to give the same size to the both grid.
-                  // Spacer(),
 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const SnProductPriceText(price: '35'),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: SnColors.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(SnSizes.cardRadiusMd),
-                              bottomRight:
-                                  Radius.circular(SnSizes.productImageRadius),
-                            )),
-                        child: const SizedBox(
-                          width: SnSizes.iconLg * 1.2,
-                          height: SnSizes.iconLg * 1.2,
-                          child: Center(
-                              child: Icon(Iconsax.add, color: SnColors.white)),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               ),
+            ),
+            /// Spacer help us to give space in grid when our other girld size is not same so its helps us to give the same size to the both grid.
+            const Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: SnSizes.sm),
+                  child: SnProductPriceText(price: '35'),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                      color: SnColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(SnSizes.cardRadiusMd),
+                        bottomRight:
+                        Radius.circular(SnSizes.productImageRadius),
+                      )),
+                  child: const SizedBox(
+                    width: SnSizes.iconLg * 1.2,
+                    height: SnSizes.iconLg * 1.2,
+                    child: Center(
+                        child: Icon(Iconsax.add, color: SnColors.white)),
+                  ),
+                )
+              ],
             )
           ],
         ),

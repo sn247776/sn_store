@@ -13,7 +13,7 @@ class SnRoundedImage extends StatelessWidget {
     this.applyImageRadius = false,
     required this.imageUrl,
     this.fit = BoxFit.contain,
-    this.backgroundColor = SnColors.light,
+    this.backgroundColor,
     this.inNetworkImage = false,
     this.borderRadius = SnSizes.md,
   });
@@ -26,7 +26,7 @@ class SnRoundedImage extends StatelessWidget {
   final bool inNetworkImage;
   final VoidCallback? onPressed;
   final double borderRadius;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxBorder? border;
 
   @override
