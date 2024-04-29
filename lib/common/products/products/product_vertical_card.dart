@@ -6,6 +6,7 @@ import 'package:sn_store/common/widgets/icons/circular_icon.dart';
 import 'package:sn_store/common/widgets/images/sn_rounded_image.dart';
 import 'package:sn_store/common/widgets/texts/product_price_text.dart';
 import 'package:sn_store/common/widgets/texts/product_title_text.dart';
+import 'package:sn_store/common/widgets/texts/sn_brand_title_text_with_verified_icon.dart';
 import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/constants/image_strings.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
@@ -72,33 +73,18 @@ class SnProductVerticalCard extends StatelessWidget {
             const SizedBox(height: SnSizes.spaceBtwItems / 2),
 
             /// Details
-            Padding(
-              padding: EdgeInsets.only(left: SnSizes.sm),
+            const Padding(
+              padding:  EdgeInsets.only(left: SnSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SnProductTitleText(
+                  SnProductTitleText(
                     title: 'Green Nike Air Shoes',
                     smallSize: true,
                   ),
-                  const SizedBox(height: SnSizes.spaceBtwItems / 2),
+                   SizedBox(height: SnSizes.spaceBtwItems / 2),
 
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: SnSizes.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: SnColors.primary,
-                        size: SnSizes.iconXs,
-                      )
-                    ],
-                  ),
+                  SnTitleWithVerifiedIcon(title: 'Nike'),
 
                 ],
               ),
@@ -136,3 +122,5 @@ class SnProductVerticalCard extends StatelessWidget {
     );
   }
 }
+
+

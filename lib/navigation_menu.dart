@@ -15,13 +15,16 @@ class NavigationMenu extends StatelessWidget {
     final dark = SnHelperFunctions.isDarkMode(context);
     return Scaffold(
       bottomNavigationBar: Obx(
-        ()=> NavigationBar(
+        () => NavigationBar(
           height: 80,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (index) => controller.selectedIndex.value =index,
+          onDestinationSelected: (index) =>
+              controller.selectedIndex.value = index,
           backgroundColor: dark ? SnColors.black : Colors.white,
-          indicatorColor: dark ? SnColors.white.withOpacity(0.1) : SnColors.black.withOpacity(0.1),
+          indicatorColor: dark
+              ? SnColors.white.withOpacity(0.1)
+              : SnColors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
             NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
@@ -30,12 +33,21 @@ class NavigationMenu extends StatelessWidget {
           ],
         ),
       ),
-      body: Obx(()=> controller.screens[controller.selectedIndex.value]),
+      body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
   }
 }
 
-class NavigationController extends GetxController{
+class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
-  final screens = [ const HomeScreen(),const StoreScreen(),Container(color: Colors.blue,),Container(color: Colors.purple,)];
+  final screens = [
+    const HomeScreen(),
+    const StoreScreen(),
+    Container(
+      color: Colors.blue,
+    ),
+    Container(
+      color: Colors.purple,
+    )
+  ];
 }
