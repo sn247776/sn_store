@@ -11,16 +11,19 @@ import 'package:sn_store/utils/helpers/helper_functions.dart';
 
 class SnBrandCard extends StatelessWidget {
   const SnBrandCard({
-    super.key,
+    super.key, required this.showBorder, this.onTap,
   });
+
+  final bool showBorder;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: SnRoundedContainer(
         padding: const EdgeInsets.all(SnSizes.sm),
-        showBorder: true,
+        showBorder: showBorder,
         backgroundColor: Colors.transparent,
         child: Row(
           children: [
