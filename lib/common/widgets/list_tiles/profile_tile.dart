@@ -6,8 +6,10 @@ import 'package:sn_store/utils/constants/image_strings.dart';
 
 class SnUserProfileTile extends StatelessWidget {
   const SnUserProfileTile({
-    super.key,
+    super.key, required this.onPressed,
   });
+
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class SnUserProfileTile extends StatelessWidget {
             .bodyMedium!
             .apply(color: SnColors.white),
       ),
-      trailing: IconButton(onPressed: (){}, icon: const Icon(Iconsax.edit, color: SnColors.white,),),
+      trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit, color: SnColors.white,),),
     );
   }
 }
