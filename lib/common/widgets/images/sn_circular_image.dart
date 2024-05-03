@@ -8,7 +8,7 @@ class SnCircularImage extends StatelessWidget {
     super.key,
     this.fit = BoxFit.cover,
     required this.image,
-    required this.isNetworkImage,
+    this.isNetworkImage = false,
     this.overlayColor,
     this.backgroundColor,
     this.width = 56,

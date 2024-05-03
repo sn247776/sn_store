@@ -15,7 +15,6 @@ class SnPrimaryHeaderContainer extends StatelessWidget {
         color: SnColors.primary,
         padding: const EdgeInsets.all(0),
         child: SizedBox(
-          height: 400,
           child: Stack(
             children: [
               Positioned(top: -150, right: -250, child: SnCircularContainer(backgroundColor: SnColors.textWhite.withOpacity(0.1),),),
