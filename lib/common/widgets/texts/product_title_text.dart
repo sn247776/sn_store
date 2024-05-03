@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sn_store/utils/constants/sizes.dart';
 
 class SnProductTitleText extends StatelessWidget {
   const SnProductTitleText(

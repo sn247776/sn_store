@@ -16,7 +16,7 @@ class SnCategoryTab extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       children: [
         Padding(
-          padding: EdgeInsets.all(SnSizes.defaultSpace),
+          padding: const EdgeInsets.all(SnSizes.defaultSpace),
           child: Column(
             children: [
               /// --Brands
@@ -31,7 +31,7 @@ class SnCategoryTab extends StatelessWidget {
               /// Products
               SnSectionHeading(title: 'You might like', onPressed: (){},),
               const SizedBox(height: SnSizes.spaceBtwItems,),
-              SnGridLayout(itemCount: 4, itemBuilder:(_, index)=> SnProductVerticalCard()),
+              SnGridLayout(itemCount: 4, itemBuilder:(_, index)=> const SnProductVerticalCard()),
               const SizedBox(height: SnSizes.spaceBtwSections,),
             ],
           ),

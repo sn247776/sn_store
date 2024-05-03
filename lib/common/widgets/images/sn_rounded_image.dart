@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 
 class SnRoundedImage extends StatelessWidget {

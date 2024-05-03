@@ -1,17 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sn_store/common/products/cart/cart_menu_icon.dart';
 import 'package:sn_store/common/products/products/brand_card.dart';
 import 'package:sn_store/common/widgets/appbar/appbar.dart';
 import 'package:sn_store/common/widgets/appbar/tabbar.dart';
-import 'package:sn_store/common/widgets/brands/brand_show_case.dart';
 import 'package:sn_store/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:sn_store/common/widgets/custom_shapes/rounded_container.dart';
 import 'package:sn_store/common/widgets/layout/grid_layout.dart';
 import 'package:sn_store/common/widgets/texts/section_heading.dart';
 import 'package:sn_store/features/shop/screens/store/widget/category_tab.dart';
 import 'package:sn_store/utils/constants/colors.dart';
-import 'package:sn_store/utils/constants/image_strings.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 import 'package:sn_store/utils/helpers/helper_functions.dart';
 
@@ -75,7 +71,9 @@ class StoreScreen extends StatelessWidget {
                             itemCount: 4,
                             mainAxisExtent: 80,
                             itemBuilder: (_, index) {
-                              return const SnBrandCard(showBorder: false,);
+                              return const SnBrandCard(
+                                showBorder: false,
+                              );
                             })
                       ],
                     ),
@@ -100,7 +98,6 @@ class StoreScreen extends StatelessWidget {
               SnCategoryTab(),
               SnCategoryTab(),
               SnCategoryTab(),
-
             ],
           ),
         ),
@@ -108,5 +105,3 @@ class StoreScreen extends StatelessWidget {
     );
   }
 }
-
-
