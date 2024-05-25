@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sn_store/common/styles/shadows.dart';
 import 'package:sn_store/common/widgets/custom_shapes/rounded_container.dart';
@@ -7,6 +8,7 @@ import 'package:sn_store/common/widgets/images/sn_rounded_image.dart';
 import 'package:sn_store/common/widgets/texts/product_price_text.dart';
 import 'package:sn_store/common/widgets/texts/product_title_text.dart';
 import 'package:sn_store/common/widgets/texts/sn_brand_title_text_with_verified_icon.dart';
+import 'package:sn_store/features/shop/screens/product_details/product_detail.dart';
 import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/constants/image_strings.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
@@ -20,7 +22,7 @@ class SnProductVerticalCard extends StatelessWidget {
     final dark = SnHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(()=> const ProductDetail()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
