@@ -16,18 +16,21 @@ class SnChoiceChip extends StatelessWidget {
   Widget build(BuildContext context) {
     final isColor = SnHelperFunctions.getColor(text) != null;
 
-    return ChoiceChip(
-      label: isColor ? const SizedBox() : Text(text),
-      selected: selected,
-      onSelected: onSelected,
-      labelStyle: TextStyle(color: selected ? SnColors.white : null),
-      avatar: isColor ? SnCircularContainer(width: 50, height: 50,backgroundColor: SnHelperFunctions.getColor(text)!) : null,
-      labelPadding: isColor ? const EdgeInsets.all(0) : null,
-      padding: isColor ? const EdgeInsets.all(0) : null,
-      shape: isColor ? const CircleBorder() : null,
-      backgroundColor: isColor ? SnHelperFunctions.getColor(text)! : null,
-      selectedColor: isColor ? SnHelperFunctions.getColor(text)! : null,
+    return Theme(
+      data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+      child: ChoiceChip(
+        label: isColor ? const SizedBox() : Text(text),
+        selected: selected,
+        onSelected: onSelected,
+        labelStyle: TextStyle(color: selected ? SnColors.white : null),
+        avatar: isColor ? SnCircularContainer(width: 50, height: 50,backgroundColor: SnHelperFunctions.getColor(text)!) : null,
+        labelPadding: isColor ? const EdgeInsets.all(0) : null,
+        padding: isColor ? const EdgeInsets.all(0) : null,
+        shape: isColor ? const CircleBorder() : null,
+        backgroundColor: isColor ? SnHelperFunctions.getColor(text)! : null,
+        selectedColor: isColor ? SnHelperFunctions.getColor(text)! : null,
 
+      ),
     );
   }
 }
