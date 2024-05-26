@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 import '../../constants/colors.dart';
 
-class TAppBarTheme{
-  TAppBarTheme._();
+class SnAppBarTheme{
+  SnAppBarTheme._();
 
   static const lightAppBarTheme = AppBarTheme(
     elevation: 0,

@@ -4,8 +4,8 @@ import '../../constants/colors.dart';
 import '../../constants/sizes.dart';
 
 /* -- Light & Dark Outlined Button Themes -- */
-class TOutlinedButtonTheme {
-  TOutlinedButtonTheme._(); //To avoid creating instances
+class SnOutlinedButtonTheme {
+  SnOutlinedButtonTheme._(); //To avoid creating instances
 
 
   /* -- Light Theme -- */

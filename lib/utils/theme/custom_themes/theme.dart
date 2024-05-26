@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/theme/custom_themes/appbar_theme.dart';
 import 'package:sn_store/utils/theme/custom_themes/bottom_sheet_theme.dart';
 import 'package:sn_store/utils/theme/custom_themes/checkbox_theme.dart';
@@ -9,8 +10,6 @@ import 'package:sn_store/utils/theme/custom_themes/text_field_theme.dart';
 import 'package:sn_store/utils/theme/custom_themes/text_theme.dart';
 
 
-import '../../constants/colors.dart';
-
 class TAppTheme {
   TAppTheme._();
 
@@ -20,15 +19,15 @@ class TAppTheme {
     disabledColor: SnColors.grey,
     brightness: Brightness.light,
     primaryColor: SnColors.primary,
-    textTheme: TTextTheme.lightTextTheme,
-    chipTheme: TChipTheme.lightChipTheme,
+    textTheme: SnTextTheme.lightTextTheme,
+    chipTheme: SnChipTheme.lightChipTheme,
     scaffoldBackgroundColor: SnColors.white,
-    appBarTheme: TAppBarTheme.lightAppBarTheme,
-    checkboxTheme: TCheckboxTheme.lightCheckboxTheme,
-    bottomSheetTheme: TBottomSheetTheme.lightBottomSheetTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.lightElevatedButtonTheme,
-    outlinedButtonTheme: TOutlinedButtonTheme.lightOutlinedButtonTheme,
-    inputDecorationTheme: TTextFormFieldTheme.lightInputDecorationTheme,
+    appBarTheme: SnAppBarTheme.lightAppBarTheme,
+    checkboxTheme: SnCheckboxTheme.lightCheckboxTheme,
+    bottomSheetTheme: SnBottomSheetTheme.lightBottomSheetTheme,
+    elevatedButtonTheme: SnElevatedButtonTheme.lightElevatedButtonTheme,
+    outlinedButtonTheme: SnOutlinedButtonTheme.lightOutlinedButtonTheme,
+    inputDecorationTheme: SnTextFormFieldTheme.lightInputDecorationTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
@@ -37,14 +36,14 @@ class TAppTheme {
     disabledColor: SnColors.grey,
     brightness: Brightness.dark,
     primaryColor: SnColors.primary,
-    textTheme: TTextTheme.darkTextTheme,
-    chipTheme: TChipTheme.darkChipTheme,
+    textTheme: SnTextTheme.darkTextTheme,
+    chipTheme: SnChipTheme.darkChipTheme,
     scaffoldBackgroundColor: SnColors.black,
-    appBarTheme: TAppBarTheme.darkAppBarTheme,
-    checkboxTheme: TCheckboxTheme.darkCheckboxTheme,
-    bottomSheetTheme: TBottomSheetTheme.darkBottomSheetTheme,
-    elevatedButtonTheme: TElevatedButtonTheme.darkElevatedButtonTheme,
-    outlinedButtonTheme: TOutlinedButtonTheme.darkOutlinedButtonTheme,
-    inputDecorationTheme: TTextFormFieldTheme.darkInputDecorationTheme,
+    appBarTheme: SnAppBarTheme.darkAppBarTheme,
+    checkboxTheme: SnCheckboxTheme.darkCheckboxTheme,
+    bottomSheetTheme: SnBottomSheetTheme.darkBottomSheetTheme,
+    elevatedButtonTheme: SnElevatedButtonTheme.darkElevatedButtonTheme,
+    outlinedButtonTheme: SnOutlinedButtonTheme.darkOutlinedButtonTheme,
+    inputDecorationTheme: SnTextFormFieldTheme.darkInputDecorationTheme,
   );
 }
