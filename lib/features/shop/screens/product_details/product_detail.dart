@@ -1,20 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
-import 'package:sn_store/common/widgets/appbar/appbar.dart';
-import 'package:sn_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:sn_store/common/widgets/icons/circular_icon.dart';
-import 'package:sn_store/common/widgets/images/sn_rounded_image.dart';
+import 'package:get/get.dart';
 import 'package:sn_store/common/widgets/texts/section_heading.dart';
 import 'package:sn_store/features/shop/screens/product_details/widgets/bottom_add_to_cart.dart';
 import 'package:sn_store/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:sn_store/features/shop/screens/product_details/widgets/product_image_slider_with_app_bar.dart';
 import 'package:sn_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:sn_store/features/shop/screens/product_details/widgets/rating_and_share.dart';
-import 'package:sn_store/utils/constants/colors.dart';
-import 'package:sn_store/utils/constants/image_strings.dart';
+import 'package:sn_store/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:sn_store/utils/constants/sizes.dart';
 import 'package:sn_store/utils/helpers/helper_functions.dart';
 
@@ -59,7 +52,7 @@ class ProductDetail extends StatelessWidget {
                 /// - Reviews
                 const Divider(),
                 const SizedBox(height: SnSizes.spaceBtwItems,),
-                SnSectionHeading(title: 'Reviews(20)', onPressed: (){},),
+                SnSectionHeading(title: 'Reviews(20)', onPressed: () => Get.to(()=> const ProductReviews()),),
                 const SizedBox(height: SnSizes.spaceBtwSections,),
               ],
             ),
