@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 import 'package:sn_store/common/products/rating/rating_indicator.dart';
 import 'package:sn_store/common/widgets/custom_shapes/rounded_container.dart';
-import 'package:sn_store/common/widgets/images/sn_circular_image.dart';
 import 'package:sn_store/common/widgets/images/sn_images_avatar.dart';
 import 'package:sn_store/utils/constants/colors.dart';
 import 'package:sn_store/utils/constants/image_strings.dart';
@@ -61,10 +60,18 @@ class UserReviewCard extends StatelessWidget {
           trimMode: TrimMode.Line,
           trimExpandedText: 'show less',
           trimCollapsedText: 'show more',
-          moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: SnColors.primary),
-          lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: SnColors.primary),
+          moreStyle: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: SnColors.primary),
+          lessStyle: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: SnColors.primary),
         ),
-        const SizedBox(height: SnSizes.spaceBtwItems,),
+        const SizedBox(
+          height: SnSizes.spaceBtwItems,
+        ),
         SnRoundedContainer(
           backgroundColor: dark ? SnColors.darkerGrey : SnColors.grey,
           child: Padding(
@@ -74,8 +81,14 @@ class UserReviewCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Sn Store', style: Theme.of(context).textTheme.titleMedium,),
-                    Text('02 Nov, 2023', style: Theme.of(context).textTheme.bodyMedium,)
+                    Text(
+                      'Sn Store',
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    Text(
+                      '02 Nov, 2023',
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    )
                   ],
                 ),
                 const SizedBox(
@@ -87,8 +100,14 @@ class UserReviewCard extends StatelessWidget {
                   trimMode: TrimMode.Line,
                   trimExpandedText: 'show less',
                   trimCollapsedText: 'show more',
-                  moreStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: SnColors.primary),
-                  lessStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: SnColors.primary),
+                  moreStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: SnColors.primary),
+                  lessStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: SnColors.primary),
                 ),
               ],
             ),
