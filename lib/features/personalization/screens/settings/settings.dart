@@ -5,6 +5,7 @@ import 'package:sn_store/common/widgets/appbar/appbar.dart';
 import 'package:sn_store/common/widgets/list_tiles/profile_tile.dart';
 import 'package:sn_store/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:sn_store/common/widgets/texts/section_heading.dart';
+import 'package:sn_store/features/personalization/screens/address/address.dart';
 import 'package:sn_store/features/personalization/screens/profile/profile.dart';
 import 'package:sn_store/features/shop/screens/home/widgets/primary_header_container.dart';
 import 'package:sn_store/utils/constants/colors.dart';
@@ -34,7 +35,8 @@ class SettingsScreen extends StatelessWidget {
                 ),
 
                 /// User Profile Card
-                SnUserProfileTile(onPressed: () => Get.to(()=> const ProfileScreen())),
+                SnUserProfileTile(
+                    onPressed: () => Get.to(() => const ProfileScreen())),
                 const SizedBox(
                   height: SnSizes.spaceBtwSections,
                 ),
@@ -58,7 +60,7 @@ class SettingsScreen extends StatelessWidget {
 
                   SnSettingMenuTile(
                     icon: Iconsax.safe_home,
-                    onTap: () {},
+                    onTap: () => Get.to(() => const UserAddressScreen()),
                     title: 'My Addresses',
                     subTitle:
                         'Manage and update your shopping delivery addresses.',
@@ -105,49 +107,67 @@ class SettingsScreen extends StatelessWidget {
                   ),
 
                   /// -- App Settings
-                  const SizedBox(height: SnSizes.spaceBtwSections,),
-                  const SnSectionHeading(title: 'App Settings', showActionButton: false,),
-                  const SizedBox(height: SnSizes.spaceBtwItems,),
+                  const SizedBox(
+                    height: SnSizes.spaceBtwSections,
+                  ),
+                  const SnSectionHeading(
+                    title: 'App Settings',
+                    showActionButton: false,
+                  ),
+                  const SizedBox(
+                    height: SnSizes.spaceBtwItems,
+                  ),
                   SnSettingMenuTile(
                     icon: Iconsax.document_upload,
                     onTap: () {},
                     title: 'Load Data',
-                    subTitle:
-                    'Upload Data to your Cloud',
+                    subTitle: 'Upload Data to your Cloud',
                   ),
                   SnSettingMenuTile(
                     icon: Iconsax.location,
                     onTap: () {},
                     title: 'Geolocation',
-                    subTitle:
-                    'Set recommendation based on location',
-                    trailing: Switch(value: true, onChanged: (value){},),
+                    subTitle: 'Set recommendation based on location',
+                    trailing: Switch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
                   ),
 
                   SnSettingMenuTile(
                     icon: Iconsax.security_user,
                     onTap: () {},
                     title: 'Safe Mode',
-                    subTitle:
-                    'Search result is safe for all ages',
-                    trailing: Switch(value: false, onChanged: (value){},),
+                    subTitle: 'Search result is safe for all ages',
+                    trailing: Switch(
+                      value: false,
+                      onChanged: (value) {},
+                    ),
                   ),
 
                   SnSettingMenuTile(
                     icon: Iconsax.image,
                     onTap: () {},
                     title: 'HD Image Quality',
-                    subTitle:
-                    'Set image quality to be seen',
-                    trailing: Switch(value: false, onChanged: (value){},),
+                    subTitle: 'Set image quality to be seen',
+                    trailing: Switch(
+                      value: false,
+                      onChanged: (value) {},
+                    ),
                   ),
 
                   /// --- Logout Button
-                  const SizedBox(height: SnSizes.spaceBtwSections,),
-                  SizedBox(width: double.infinity,
-                  child: OutlinedButton(onPressed: (){}, child: const Text('Logout'),),),
+                  const SizedBox(
+                    height: SnSizes.spaceBtwSections,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton(
+                      onPressed: () {},
+                      child: const Text('Logout'),
+                    ),
+                  ),
                   const SizedBox(height: SnSizes.spaceBtwSections * 2.5),
-
                 ],
               ),
             )
