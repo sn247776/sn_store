@@ -19,8 +19,8 @@ class SnHomeAppBar extends StatelessWidget {
           Text(SnTexts.homeAppbarSubTitle, style: Theme.of(context).textTheme.headlineSmall!.apply(color: SnColors.white),),
         ],
       ),
-      actions: [
-        SnCartCounterIcon(onPressed: (){}, iconColor: SnColors.white,)
+      actions: const [
+        SnCartCounterIcon(iconColor: SnColors.white,)
       ],
     );
   }
